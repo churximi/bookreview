@@ -13,7 +13,7 @@ def gethtml(url):    # 参数为网址
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.11 (KHTML, like Gecko) '
                              'Chrome/17.0.963.12 Safari/535.11'}
     request = urllib2.Request(url, headers=headers)
-    response = urllib2.urlopen(request)
+    response = urllib2.urlopen(request, timeout=5)
     content = response.read().decode('utf-8')
 
     return content
