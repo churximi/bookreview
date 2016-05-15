@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-功能：爬取亚马逊图书，给定某类图书的网址，获取图书书评内容
+功能：爬取亚马逊图书，给定图书的亚马逊编码，获取图书书评内容
 时间：2016年5月11日 23:53:51
 """
 
@@ -74,7 +74,7 @@ print u"图书编码个数（即图书本数）：", len(allbookcodes)
 f = codecs.open("allbooks.xml", "a", "utf-8")
 f.truncate()
 
-getreviews(948, 0)
+getreviews(0)
 
 f.close()
 print(u"\n程序结束！")
