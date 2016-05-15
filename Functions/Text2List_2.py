@@ -11,7 +11,7 @@ import codecs
 
 def text2list():
     # 打开文件
-    file_path = u"D:\\GitHub\\bookreview\\统计分析\\停用词表.txt"    # 固定停用词表
+    file_path = u"D:\\GitHub\\bookreview\\Files\\停用词表.txt"    # 固定停用词表
     f1 = codecs.open(file_path, "r", encoding="utf-8")
     print u"已经打开文本：", file_path
 
