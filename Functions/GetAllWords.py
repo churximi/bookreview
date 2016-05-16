@@ -8,28 +8,13 @@
 格式：[[词1, tf1], [词2, tf2], ]
 """
 
-import codecs
-import tkFileDialog
 import re
-from Functions import Text2List
+from Functions import GetTextList
 from Functions import Text2List_2
 
 
 def getallwords():
-    # 打开文件
-    print u"请选择一个已经空格分好词的文本..."
-    file_path = tkFileDialog.askopenfilename(title=u"选择文件")
-    f1 = codecs.open(file_path, "r", encoding="utf-8")
-    print u"已经打开文本：", file_path
-
-    # 获得原始文本所有词汇
-    wordlist = []
-    for line in f1:
-        words = line.strip().split(" ")
-        for word in words:
-            if word:
-                wordlist.append(word)
-    print u"原始文本总词数：", len(wordlist)
+    wordlist = GetTextList.main()    # 获取全文词汇列表
 
     # 统计词频TF，从大到小排序，去除无意义符号，去除停用词
     stopwords = Text2List_2.text2list()    # 停用词表
@@ -42,7 +27,6 @@ def getallwords():
     word_tf_list.sort(key=lambda x: x[1], reverse=True)
     print u"词的种类数：", len(word_tf_list)
 
-    f1.close()
     return word_tf_list
 
 if __name__ == "__main__":
@@ -53,4 +37,5 @@ if __name__ == "__main__":
 """
 更新日志
 2016年5月15日 21:02:13， 为避免文本长度太大，改用对文本按行处理，而不是全部读入
+2016年5月16日 18:47:07， 将部分代码模块化
 """
