@@ -12,7 +12,7 @@ import tkFileDialog
 
 def main():
     # 打开文件
-    print u"请选择一个已经空格分好词的文本..."
+    print u"准备获取全文词汇列表，请选择一个已经空格分好词的文本..."
     file_path = tkFileDialog.askopenfilename(title=u"选择文件")
     f1 = codecs.open(file_path, "r", encoding="utf-8")
     print u"已经打开文本：", file_path

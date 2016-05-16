@@ -13,7 +13,7 @@ from Functions import GetTextList
 from Functions import Text2List_2
 
 
-def getallwords():
+def main():
     wordlist = GetTextList.main()    # 获取全文词汇列表
 
     # 统计词频TF，从大到小排序，去除无意义符号，去除停用词
@@ -30,7 +30,7 @@ def getallwords():
     return word_tf_list
 
 if __name__ == "__main__":
-    list1 = getallwords()
+    list1 = main()
     for item in list1:
         print item[0], "\t", item[1]
 
