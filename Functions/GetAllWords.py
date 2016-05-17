@@ -10,14 +10,14 @@
 
 import re
 from Functions import GetTextList
-from Functions import Text2List_2
+from Functions import GetStopwords
 
 
 def main():
     wordlist = GetTextList.main()    # 获取全文词汇列表
 
     # 统计词频TF，从大到小排序，去除无意义符号，去除停用词
-    stopwords = Text2List_2.text2list()    # 停用词表
+    stopwords = GetStopwords.stopwords()    # 停用词表
     word_tf_list = []
     pattern = re.compile(u'[A-Za-z\u4e00-\u9fa5]+')
     for word in set(wordlist):
@@ -38,4 +38,5 @@ if __name__ == "__main__":
 更新日志
 2016年5月15日 21:02:13， 为避免文本长度太大，改用对文本按行处理，而不是全部读入
 2016年5月16日 18:47:07， 将部分代码模块化
+2016年5月17日 19:51:25， 已加入类TextSta中
 """

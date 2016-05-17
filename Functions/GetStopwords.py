@@ -9,7 +9,7 @@
 import codecs
 
 
-def text2list():
+def stopwords():
     # 打开文件
     file_path = u"D:\\GitHub\\bookreview\\Files\\停用词表.txt"    # 固定停用词表
     f1 = codecs.open(file_path, "r", encoding="utf-8")
@@ -19,12 +19,12 @@ def text2list():
     line_list = []
     for line in f1:
         line_list.append(line.strip())
-    print u"列表里的元素个数：", len(line_list)
+    print u"停用词个数：", len(line_list)
 
     f1.close()
     return line_list
 
 if __name__ == "__main__":
-    y = text2list()
+    y = stopwords()
     for item in y:
         print item
