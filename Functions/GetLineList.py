@@ -11,7 +11,7 @@ import codecs
 import tkFileDialog
 
 
-def text2list():
+def main():
     # 打开文件
     file_path = tkFileDialog.askopenfilename(title=u"选择文件")
     f1 = codecs.open(file_path, "r", encoding="utf-8")
@@ -27,6 +27,6 @@ def text2list():
     return line_list
 
 if __name__ == "__main__":
-    y = text2list()
+    y = main()
     for item in y:
         print item

@@ -9,8 +9,9 @@
 """
 
 import re
-from Functions import GetTextList
+
 from Functions import GetStopwords
+from Functions.history import GetTextList
 
 
 def main():

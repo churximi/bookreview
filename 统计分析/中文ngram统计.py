@@ -9,10 +9,11 @@
 例如：【初学者】可能会被分词为【初】【学者】，而【学者】本身是一个不同的词
 """
 
-from Functions import Ngrams_zh
-from Functions import GetTextList
-import re
 import codecs
+import re
+
+from Functions import Ngrams_zh
+from Functions.history import GetTextList
 
 wordlist = GetTextList.main()    # 获取文本的全文词汇列表
 newlist = Ngrams_zh.ngram(wordlist, 2)    # 2-gram处理，获得新词
