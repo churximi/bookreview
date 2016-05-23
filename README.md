@@ -7,6 +7,5 @@ content: text processing on book reviews
 
 
 ## 联系方式
-邮箱：qiuxingming2014@gmail.com
-
-博客：http://blog.csdn.net/churximi
+- 邮箱：qiuxingming2014@gmail.com
+- 博客：http://blog.csdn.net/churximi
