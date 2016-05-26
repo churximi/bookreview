@@ -9,6 +9,7 @@
 ## 联系方式
 - **邮箱**：qiuxingming2014@gmail.com
 - **博客**：http://blog.csdn.net/churximi
+- **网站**：http://www.qiuxm.com/
 
 ## 备注
 - 个人的研究生毕业设计
