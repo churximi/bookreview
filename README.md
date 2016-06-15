@@ -16,6 +16,8 @@
 - 标注
 - weka分类
 - 深度学习
+  - theano
+  - keras
 
 ## 联系方式
 - **邮箱**：simon@qiuxm.com
